@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "main-font";
+    src: url("fonts/TitilliumWeb-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --text-color: #ffffff;
+    --box-color: #003459;
+    --input-color: #007EA7;
+    --border-color: #ffffff;
+    --background-color: #00A8E8;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+.title {
+    width: 100%;
+    background-color: var(--box-color);
+    text-align: center;
+}
+
+.input-section {
+    position: fixed;
+    padding-bottom: 2%;
+    bottom: 0;
+    width: 100%;
+}
+
+.button {
+    background-color: var(--input-color);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 15px, 32px;
+    font-family: "main-font";
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: var(--box-color);
+}
+
+.dropdown {
+    background-color: var(--input-color);
+    color: var(--text-color);
+    border-width: 0;
+    font-family: "main-font";
+    border-radius: 5px;
+}
+
+.text {
+    color: var(--text-color);
+    font-family: "main-font";
+}
+
+.attempt-box {
+    width: 100%;
+    max-width: 40%;
+    margin: 1% auto;
+    padding: 2px;
+    color: var(--text-color);
+    background-color: var(--box-color);
+    border-radius: 10px;
+    font-family: "main-font";
+}
+
+.input-box {
+    width: 90%;
+    max-width: 280px;
+    margin: 1% auto;
+    padding: 14px;
+    background-color: var(--box-color);
+    border: 1px solid var(--background-color);
+    border-radius: 10px;
+    font-family: "main-font";
+    align-items: center;
+    gap: 15px;
+    display: flex;
+}
+
+.centered {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
