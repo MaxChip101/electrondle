@@ -32,15 +32,12 @@ type PeriodicTable struct {
 }
 
 type Element struct {
-	Name     string `json:"Name"`
+	Name     string `json:"name"`
 	Symbol   string `json:"symbol"`
-	NobleGas string `json:"noble-gas-prefix"`
-	S_Prefix int    `json:"s-prefix"`
-	S_Suffix int    `json:"s-suffix"`
-	D_Prefix int    `json:"d-prefix"`
-	D_Suffix int    `json:"d-suffix"`
-	P_Prefix int    `json:"p-prefix"`
-	P_Suffix int    `json:"p-suffix"`
+	NobleGas string `json:"noble-gas"`
+	S        int    `json:"s"`
+	D        int    `json:"d"`
+	P        int    `json:"p"`
 }
 
 var (
@@ -121,20 +118,20 @@ func CheckNobleGas(attempt Attempt) string {
 }
 
 func Check_S(attempt Attempt) string {
-	return CheckDifference(current_element.S_Suffix - attempt.S)
+	return CheckDifference(current_element.S - attempt.S)
 }
 
 func Check_D(attempt Attempt) string {
-	return CheckDifference(current_element.D_Suffix - attempt.D)
+	return CheckDifference(current_element.D - attempt.D)
 }
 
 func Check_P(attempt Attempt) string {
-	return CheckDifference(current_element.P_Suffix - attempt.P)
+	return CheckDifference(current_element.P - attempt.P)
 }
 
 func CheckWinState() int {
 	// win
-	if pos := len(attempts) - 1; pos >= 0 && current_element.NobleGas == attempts[pos].NobleGas && current_element.S_Suffix == attempts[pos].S && current_element.D_Suffix == attempts[pos].D && current_element.P_Suffix == attempts[pos].P {
+	if pos := len(attempts) - 1; pos >= 0 && current_element.NobleGas == attempts[pos].NobleGas && current_element.S == attempts[pos].S && current_element.D == attempts[pos].D && current_element.P == attempts[pos].P {
 		return GameStateWon
 	} else if len(attempts) >= maxAttempts { // loss
 		return GameStateLost
@@ -164,19 +161,16 @@ func AddAttempts(w http.ResponseWriter) {
 				<span>You Won, the element was: %v (%v)</span>
 			</div>
 			<div class="attempt-row">
-				<span>([%v] %vs<sup>%v</sup> %vd<sup>%v</sup> %vp<sup>%v</sup>)</span>
+				<span>([%v] s<sup>%v</sup> d<sup>%v</sup> p<sup>%v</sup>)</span>
 			</div>
 		</div>
 		`,
 			current_element.Name,
 			current_element.Symbol,
 			current_element.NobleGas,
-			current_element.S_Prefix,
-			current_element.S_Suffix,
-			current_element.D_Prefix,
-			current_element.D_Suffix,
-			current_element.P_Prefix,
-			current_element.P_Suffix,
+			current_element.S,
+			current_element.D,
+			current_element.P,
 		)
 	case GameStateLost:
 		fmt.Fprintf(w, `
@@ -185,19 +179,16 @@ func AddAttempts(w http.ResponseWriter) {
 				<span>You Lost, the element was: %v (%v)</span>
 			</div>
 			<div class="attempt-row">
-				<span>([%v] %vs<sup>%v</sup> %vd<sup>%v</sup> %vp<sup>%v</sup>)</span>
+				<span>([%v] s<sup>%v</sup> d<sup>%v</sup> p<sup>%v</sup>)</span>
 			</div>
 		</div>
 		`,
 			current_element.Name,
 			current_element.Symbol,
 			current_element.NobleGas,
-			current_element.S_Prefix,
-			current_element.S_Suffix,
-			current_element.D_Prefix,
-			current_element.D_Suffix,
-			current_element.P_Prefix,
-			current_element.P_Suffix,
+			current_element.S,
+			current_element.D,
+			current_element.P,
 		)
 	}
 

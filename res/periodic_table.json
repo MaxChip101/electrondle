@@ -1,994 +1,836 @@
 {
     "elements": [
         {
-            "Name": "Hydrogen",
-            "Symbol": "H",
-            "noble-gas-prefix": "~",
-            "s-prefix": 1,
-            "s-suffix": 1,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Helium",
-            "Symbol": "He",
-            "noble-gas-prefix": "~",
-            "s-prefix": 1,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Lithium",
-            "Symbol": "Li",
-            "noble-gas-prefix": "He",
-            "s-prefix": 2,
-            "s-suffix": 1,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Beryllium",
-            "Symbol": "Be",
-            "noble-gas-prefix": "He",
-            "s-prefix": 2,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Boron",
-            "Symbol": "B",
-            "noble-gas-prefix": "He",
-            "s-prefix": 2,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 2,
-            "p-suffix": 1
-        },
-        {
-            "Name": "Carbon",
-            "Symbol": "C",
-            "noble-gas-prefix": "He",
-            "s-prefix": 2,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 2,
-            "p-suffix": 2
-        },
-        {
-            "Name": "Nitrogen",
-            "Symbol": "N",
-            "noble-gas-prefix": "He",
-            "s-prefix": 2,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 2,
-            "p-suffix": 3
-        },
-        {
-            "Name": "Oxygen",
-            "Symbol": "O",
-            "noble-gas-prefix": "He",
-            "s-prefix": 2,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 2,
-            "p-suffix": 4
-        },
-        {
-            "Name": "Fluorine",
-            "Symbol": "F",
-            "noble-gas-prefix": "He",
-            "s-prefix": 2,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 2,
-            "p-suffix": 5
-        },
-        {
-            "Name": "Neon",
-            "Symbol": "Ne",
-            "noble-gas-prefix": "He",
-            "s-prefix": 2,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 2,
-            "p-suffix": 6
-        },
-        {
-            "Name": "Sodium",
-            "Symbol": "Na",
-            "noble-gas-prefix": "Ne",
-            "s-prefix": 3,
-            "s-suffix": 1,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Magnesium",
-            "Symbol": "Mg",
-            "noble-gas-prefix": "Ne",
-            "s-prefix": 3,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Aluminium",
-            "Symbol": "Al",
-            "noble-gas-prefix": "Ne",
-            "s-prefix": 3,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 3,
-            "p-suffix": 1
-        },
-        {
-            "Name": "Silicon",
-            "Symbol": "Si",
-            "noble-gas-prefix": "Ne",
-            "s-prefix": 3,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 3,
-            "p-suffix": 2
-        },
-        {
-            "Name": "Phosphorus",
-            "Symbol": "P",
-            "noble-gas-prefix": "Ne",
-            "s-prefix": 3,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 3,
-            "p-suffix": 3
-        },
-        {
-            "Name": "Sulfur",
-            "Symbol": "S",
-            "noble-gas-prefix": "Ne",
-            "s-prefix": 3,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 3,
-            "p-suffix": 4
-        },
-        {
-            "Name": "Chlorine",
-            "Symbol": "Cl",
-            "noble-gas-prefix": "Ne",
-            "s-prefix": 3,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 3,
-            "p-suffix": 5
-        },
-        {
-            "Name": "Argon",
-            "Symbol": "Ar",
-            "noble-gas-prefix": "Ne",
-            "s-prefix": 3,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 3,
-            "p-suffix": 6
-        },
-        {
-            "Name": "Potassium",
-            "Symbol": "K",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 1,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Calcium",
-            "Symbol": "Ca",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Scandium",
-            "Symbol": "Sc",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 1,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Titanium",
-            "Symbol": "Ti",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 2,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Vanadium",
-            "Symbol": "V",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 3,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Chromium",
-            "Symbol": "Cr",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 1,
-            "d-prefix": 3,
-            "d-suffix": 5,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Manganese",
-            "Symbol": "Mn",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 5,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Iron",
-            "Symbol": "Fe",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 6,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Cobalt",
-            "Symbol": "Co",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 7,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Nickel",
-            "Symbol": "Ni",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 8,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Copper",
-            "Symbol": "Cu",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 1,
-            "d-prefix": 3,
-            "d-suffix": 10,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Zinc",
-            "Symbol": "Zn",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 10,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Gallium",
-            "Symbol": "Ga",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 10,
-            "p-prefix": 4,
-            "p-suffix": 1
-        },
-        {
-            "Name": "Germanium",
-            "Symbol": "Ge",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 10,
-            "p-prefix": 4,
-            "p-suffix": 2
-        },
-        {
-            "Name": "Arsenic",
-            "Symbol": "As",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 10,
-            "p-prefix": 4,
-            "p-suffix": 3
-        },
-        {
-            "Name": "Selenium",
-            "Symbol": "Se",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 10,
-            "p-prefix": 4,
-            "p-suffix": 4
-        },
-        {
-            "Name": "Bromine",
-            "Symbol": "Br",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 10,
-            "p-prefix": 4,
-            "p-suffix": 5
-        },
-        {
-            "Name": "Krypton",
-            "Symbol": "Kr",
-            "noble-gas-prefix": "Ar",
-            "s-prefix": 4,
-            "s-suffix": 2,
-            "d-prefix": 3,
-            "d-suffix": 10,
-            "p-prefix": 4,
-            "p-suffix": 6
-        },
-        {
-            "Name": "Rubidium",
-            "Symbol": "Rb",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 1,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Strontium",
-            "Symbol": "Sr",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Yttrium",
-            "Symbol": "Y",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 1,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Zirconium",
-            "Symbol": "Zr",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 2,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Niobium",
-            "Symbol": "Nb",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 1,
-            "d-prefix": 4,
-            "d-suffix": 4,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Molybdenum",
-            "Symbol": "Mo",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 1,
-            "d-prefix": 4,
-            "d-suffix": 5,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Technetium",
-            "Symbol": "Tc",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 5,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Ruthenium",
-            "Symbol": "Ru",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 1,
-            "d-prefix": 4,
-            "d-suffix": 7,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Rhodium",
-            "Symbol": "Rh",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 1,
-            "d-prefix": 4,
-            "d-suffix": 8,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Palladium",
-            "Symbol": "Pd",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 0,
-            "s-suffix": 0,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Silver",
-            "Symbol": "Ag",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 1,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Cadmium",
-            "Symbol": "Cd",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Indium",
-            "Symbol": "In",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 5,
-            "p-suffix": 1
-        },
-        {
-            "Name": "Tin",
-            "Symbol": "Sn",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 5,
-            "p-suffix": 2
-        },
-        {
-            "Name": "Antimony",
-            "Symbol": "Sb",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 5,
-            "p-suffix": 3
-        },
-        {
-            "Name": "Tellurium",
-            "Symbol": "Te",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 5,
-            "p-suffix": 4
-        },
-        {
-            "Name": "Iodine",
-            "Symbol": "I",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 5,
-            "p-suffix": 5
-        },
-        {
-            "Name": "Xenon",
-            "Symbol": "Xe",
-            "noble-gas-prefix": "Kr",
-            "s-prefix": 5,
-            "s-suffix": 2,
-            "d-prefix": 4,
-            "d-suffix": 10,
-            "p-prefix": 5,
-            "p-suffix": 6
-        },
-        {
-            "Name": "Cesium",
-            "Symbol": "Cs",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 1,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Barium",
-            "Symbol": "Ba",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Lanthanum",
-            "Symbol": "La",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 1,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Hafnium",
-            "Symbol": "Hf",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 2,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Tantalum",
-            "Symbol": "Ta",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 3,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Tungsten",
-            "Symbol": "W",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 4,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Rhenium",
-            "Symbol": "Re",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 5,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Osmium",
-            "Symbol": "Os",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 6,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Iridium",
-            "Symbol": "Ir",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 7,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Platinum",
-            "Symbol": "Pt",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 1,
-            "d-prefix": 5,
-            "d-suffix": 9,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Gold",
-            "Symbol": "Au",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 1,
-            "d-prefix": 5,
-            "d-suffix": 10,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Mercury",
-            "Symbol": "Hg",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 10,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Thallium",
-            "Symbol": "Tl",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 10,
-            "p-prefix": 6,
-            "p-suffix": 1
-        },
-        {
-            "Name": "Lead",
-            "Symbol": "Pb",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 10,
-            "p-prefix": 6,
-            "p-suffix": 2
-        },
-        {
-            "Name": "Bismuth",
-            "Symbol": "Bi",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 10,
-            "p-prefix": 6,
-            "p-suffix": 3
-        },
-        {
-            "Name": "Polonium",
-            "Symbol": "Po",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 10,
-            "p-prefix": 6,
-            "p-suffix": 4
-        },
-        {
-            "Name": "Astatine",
-            "Symbol": "At",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 10,
-            "p-prefix": 6,
-            "p-suffix": 5
-        },
-        {
-            "Name": "Radon",
-            "Symbol": "Rn",
-            "noble-gas-prefix": "Xe",
-            "s-prefix": 6,
-            "s-suffix": 2,
-            "d-prefix": 5,
-            "d-suffix": 10,
-            "p-prefix": 6,
-            "p-suffix": 6
-        },
-        {
-            "Name": "Francium",
-            "Symbol": "Fr",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 1,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Radium",
-            "Symbol": "Ra",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 0,
-            "d-suffix": 0,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Actinium",
-            "Symbol": "Ac",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 1,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Rutherfordium",
-            "Symbol": "Rf",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 2,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Dubnium",
-            "Symbol": "Db",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 3,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Seaborgium",
-            "Symbol": "Sg",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 4,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Bohrium",
-            "Symbol": "Bh",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 5,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Hassium",
-            "Symbol": "Hs",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 6,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Meitnerium",
-            "Symbol": "Mt",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 7,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Darmstadtium",
-            "Symbol": "Ds",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 8,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Roentgenium",
-            "Symbol": "Rg",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 9,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Copernicium",
-            "Symbol": "Cn",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 10,
-            "p-prefix": 0,
-            "p-suffix": 0
-        },
-        {
-            "Name": "Nihonium",
-            "Symbol": "Nh",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 10,
-            "p-prefix": 7,
-            "p-suffix": 1
-        },
-        {
-            "Name": "Flerovium",
-            "Symbol": "Fl",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 10,
-            "p-prefix": 7,
-            "p-suffix": 2
-        },
-        {
-            "Name": "Moscovium",
-            "Symbol": "Mc",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 10,
-            "p-prefix": 7,
-            "p-suffix": 3
-        },
-        {
-            "Name": "Livermorium",
-            "Symbol": "Lv",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 10,
-            "p-prefix": 7,
-            "p-suffix": 4
-        },
-        {
-            "Name": "Tennessine",
-            "Symbol": "Ts",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 10,
-            "p-prefix": 7,
-            "p-suffix": 5
-        },
-        {
-            "Name": "Oganesson",
-            "Symbol": "Og",
-            "noble-gas-prefix": "Rn",
-            "s-prefix": 7,
-            "s-suffix": 2,
-            "d-prefix": 6,
-            "d-suffix": 10,
-            "p-prefix": 7,
-            "p-suffix": 6
+            "name": "Hydrogen",
+            "symbol": "H",
+            "noble-gas": "none",
+            "s": 1,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Helium",
+            "symbol": "He",
+            "noble-gas": "none",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Lithium",
+            "symbol": "Li",
+            "noble-gas": "He",
+            "s": 1,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Beryllium",
+            "symbol": "Be",
+            "noble-gas": "He",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Boron",
+            "symbol": "B",
+            "noble-gas": "He",
+            "s": 2,
+            "d": 0,
+            "p": 1
+        },
+        {
+            "name": "Carbon",
+            "symbol": "C",
+            "noble-gas": "He",
+            "s": 2,
+            "d": 0,
+            "p": 2
+        },
+        {
+            "name": "Nitrogen",
+            "symbol": "N",
+            "noble-gas": "He",
+            "s": 2,
+            "d": 0,
+            "p": 3
+        },
+        {
+            "name": "Oxygen",
+            "symbol": "O",
+            "noble-gas": "He",
+            "s": 2,
+            "d": 0,
+            "p": 4
+        },
+        {
+            "name": "Fluorine",
+            "symbol": "F",
+            "noble-gas": "He",
+            "s": 2,
+            "d": 0,
+            "p": 5
+        },
+        {
+            "name": "Neon",
+            "symbol": "Ne",
+            "noble-gas": "He",
+            "s": 2,
+            "d": 0,
+            "p": 6
+        },
+        {
+            "name": "Sodium",
+            "symbol": "Na",
+            "noble-gas": "Ne",
+            "s": 1,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Magnesium",
+            "symbol": "Mg",
+            "noble-gas": "Ne",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Aluminium",
+            "symbol": "Al",
+            "noble-gas": "Ne",
+            "s": 2,
+            "d": 0,
+            "p": 1
+        },
+        {
+            "name": "Silicon",
+            "symbol": "Si",
+            "noble-gas": "Ne",
+            "s": 2,
+            "d": 0,
+            "p": 2
+        },
+        {
+            "name": "Phosphorus",
+            "symbol": "P",
+            "noble-gas": "Ne",
+            "s": 2,
+            "d": 0,
+            "p": 3
+        },
+        {
+            "name": "Sulfur",
+            "symbol": "S",
+            "noble-gas": "Ne",
+            "s": 2,
+            "d": 0,
+            "p": 4
+        },
+        {
+            "name": "Chlorine",
+            "symbol": "Cl",
+            "noble-gas": "Ne",
+            "s": 2,
+            "d": 0,
+            "p": 5
+        },
+        {
+            "name": "Argon",
+            "symbol": "Ar",
+            "noble-gas": "Ne",
+            "s": 2,
+            "d": 0,
+            "p": 6
+        },
+        {
+            "name": "Potassium",
+            "symbol": "K",
+            "noble-gas": "Ar",
+            "s": 1,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Calcium",
+            "symbol": "Ca",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Scandium",
+            "symbol": "Sc",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 1,
+            "p": 0
+        },
+        {
+            "name": "Titanium",
+            "symbol": "Ti",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 2,
+            "p": 0
+        },
+        {
+            "name": "Vanadium",
+            "symbol": "V",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 3,
+            "p": 0
+        },
+        {
+            "name": "Chromium",
+            "symbol": "Cr",
+            "noble-gas": "Ar",
+            "s": 1,
+            "d": 5,
+            "p": 0
+        },
+        {
+            "name": "Manganese",
+            "symbol": "Mn",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 5,
+            "p": 0
+        },
+        {
+            "name": "Iron",
+            "symbol": "Fe",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 6,
+            "p": 0
+        },
+        {
+            "name": "Cobalt",
+            "symbol": "Co",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 7,
+            "p": 0
+        },
+        {
+            "name": "Nickel",
+            "symbol": "Ni",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 8,
+            "p": 0
+        },
+        {
+            "name": "Copper",
+            "symbol": "Cu",
+            "noble-gas": "Ar",
+            "s": 1,
+            "d": 10,
+            "p": 0
+        },
+        {
+            "name": "Zinc",
+            "symbol": "Zn",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 10,
+            "p": 0
+        },
+        {
+            "name": "Gallium",
+            "symbol": "Ga",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 10,
+            "p": 1
+        },
+        {
+            "name": "Germanium",
+            "symbol": "Ge",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 10,
+            "p": 2
+        },
+        {
+            "name": "Arsenic",
+            "symbol": "As",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 10,
+            "p": 3
+        },
+        {
+            "name": "Selenium",
+            "symbol": "Se",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 10,
+            "p": 4
+        },
+        {
+            "name": "Bromine",
+            "symbol": "Br",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 10,
+            "p": 5
+        },
+        {
+            "name": "Krypton",
+            "symbol": "Kr",
+            "noble-gas": "Ar",
+            "s": 2,
+            "d": 10,
+            "p": 6
+        },
+        {
+            "name": "Rubidium",
+            "symbol": "Rb",
+            "noble-gas": "Kr",
+            "s": 1,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Strontium",
+            "symbol": "Sr",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Yttrium",
+            "symbol": "Y",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 1,
+            "p": 0
+        },
+        {
+            "name": "Zirconium",
+            "symbol": "Zr",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 2,
+            "p": 0
+        },
+        {
+            "name": "Niobium",
+            "symbol": "Nb",
+            "noble-gas": "Kr",
+            "s": 1,
+            "d": 4,
+            "p": 0
+        },
+        {
+            "name": "Molybdenum",
+            "symbol": "Mo",
+            "noble-gas": "Kr",
+            "s": 1,
+            "d": 5,
+            "p": 0
+        },
+        {
+            "name": "Technetium",
+            "symbol": "Tc",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 5,
+            "p": 0
+        },
+        {
+            "name": "Ruthenium",
+            "symbol": "Ru",
+            "noble-gas": "Kr",
+            "s": 1,
+            "d": 7,
+            "p": 0
+        },
+        {
+            "name": "Rhodium",
+            "symbol": "Rh",
+            "noble-gas": "Kr",
+            "s": 1,
+            "d": 8,
+            "p": 0
+        },
+        {
+            "name": "Palladium",
+            "symbol": "Pd",
+            "noble-gas": "Kr",
+            "s": 0,
+            "d": 10,
+            "p": 0
+        },
+        {
+            "name": "Silver",
+            "symbol": "Ag",
+            "noble-gas": "Kr",
+            "s": 1,
+            "d": 10,
+            "p": 0
+        },
+        {
+            "name": "Cadmium",
+            "symbol": "Cd",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 10,
+            "p": 0
+        },
+        {
+            "name": "Indium",
+            "symbol": "In",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 10,
+            "p": 1
+        },
+        {
+            "name": "Tin",
+            "symbol": "Sn",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 10,
+            "p": 2
+        },
+        {
+            "name": "Antimony",
+            "symbol": "Sb",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 10,
+            "p": 3
+        },
+        {
+            "name": "Tellurium",
+            "symbol": "Te",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 10,
+            "p": 4
+        },
+        {
+            "name": "Iodine",
+            "symbol": "I",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 10,
+            "p": 5
+        },
+        {
+            "name": "Xenon",
+            "symbol": "Xe",
+            "noble-gas": "Kr",
+            "s": 2,
+            "d": 10,
+            "p": 6
+        },
+        {
+            "name": "Cesium",
+            "symbol": "Cs",
+            "noble-gas": "Xe",
+            "s": 1,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Barium",
+            "symbol": "Ba",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Lanthanum",
+            "symbol": "La",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 1,
+            "p": 0
+        },
+        {
+            "name": "Hafnium",
+            "symbol": "Hf",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 2,
+            "p": 0
+        },
+        {
+            "name": "Tantalum",
+            "symbol": "Ta",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 3,
+            "p": 0
+        },
+        {
+            "name": "Tungsten",
+            "symbol": "W",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 4,
+            "p": 0
+        },
+        {
+            "name": "Rhenium",
+            "symbol": "Re",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 5,
+            "p": 0
+        },
+        {
+            "name": "Osmium",
+            "symbol": "Os",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 6,
+            "p": 0
+        },
+        {
+            "name": "Iridium",
+            "symbol": "Ir",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 7,
+            "p": 0
+        },
+        {
+            "name": "Platinum",
+            "symbol": "Pt",
+            "noble-gas": "Xe",
+            "s": 1,
+            "d": 9,
+            "p": 0
+        },
+        {
+            "name": "Gold",
+            "symbol": "Au",
+            "noble-gas": "Xe",
+            "s": 1,
+            "d": 10,
+            "p": 0
+        },
+        {
+            "name": "Mercury",
+            "symbol": "Hg",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 10,
+            "p": 0
+        },
+        {
+            "name": "Thallium",
+            "symbol": "Tl",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 10,
+            "p": 1
+        },
+        {
+            "name": "Lead",
+            "symbol": "Pb",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 10,
+            "p": 2
+        },
+        {
+            "name": "Bismuth",
+            "symbol": "Bi",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 10,
+            "p": 3
+        },
+        {
+            "name": "Polonium",
+            "symbol": "Po",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 10,
+            "p": 4
+        },
+        {
+            "name": "Astatine",
+            "symbol": "At",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 10,
+            "p": 5
+        },
+        {
+            "name": "Radon",
+            "symbol": "Rn",
+            "noble-gas": "Xe",
+            "s": 2,
+            "d": 10,
+            "p": 6
+        },
+        {
+            "name": "Francium",
+            "symbol": "Fr",
+            "noble-gas": "Rn",
+            "s": 1,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Radium",
+            "symbol": "Ra",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Actinium",
+            "symbol": "Ac",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 1,
+            "p": 0
+        },
+        {
+            "name": "Thorium",
+            "symbol": "Th",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 2,
+            "p": 0
+        },
+        {
+            "name": "Protactinium",
+            "symbol": "Pa",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 1,
+            "p": 0
+        },
+        {
+            "name": "Uranium",
+            "symbol": "U",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 1,
+            "p": 0
+        },
+        {
+            "name": "Neptunium",
+            "symbol": "Np",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 1,
+            "p": 0
+        },
+        {
+            "name": "Plutonium",
+            "symbol": "Pu",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Americium",
+            "symbol": "Am",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Curium",
+            "symbol": "Cm",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 1,
+            "p": 0
+        },
+        {
+            "name": "Berkelium",
+            "symbol": "Bk",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Californium",
+            "symbol": "Cf",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Einsteinium",
+            "symbol": "Es",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Fermium",
+            "symbol": "Fm",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Mendelevium",
+            "symbol": "Md",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Nobelium",
+            "symbol": "No",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 0
+        },
+        {
+            "name": "Lawrencium",
+            "symbol": "Lr",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 0,
+            "p": 1
+        },
+        {
+            "name": "Rutherfordium",
+            "symbol": "Rf",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 2,
+            "p": 0
+        },
+        {
+            "name": "Dubnium",
+            "symbol": "Db",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 3,
+            "p": 0
+        },
+        {
+            "name": "Seaborgium",
+            "symbol": "Sg",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 4,
+            "p": 0
+        },
+        {
+            "name": "Bohrium",
+            "symbol": "Bh",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 5,
+            "p": 0
+        },
+        {
+            "name": "Hassium",
+            "symbol": "Hs",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 6,
+            "p": 0
+        },
+        {
+            "name": "Meitnerium",
+            "symbol": "Mt",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 7,
+            "p": 0
+        },
+        {
+            "name": "Darmstadtium",
+            "symbol": "Ds",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 8,
+            "p": 0
+        },
+        {
+            "name": "Roentgenium",
+            "symbol": "Rg",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 9,
+            "p": 0
+        },
+        {
+            "name": "Copernicium",
+            "symbol": "Cn",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 10,
+            "p": 0
+        },
+        {
+            "name": "Nihonium",
+            "symbol": "Nh",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 10,
+            "p": 1
+        },
+        {
+            "name": "Flerovium",
+            "symbol": "Fl",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 10,
+            "p": 2
+        },
+        {
+            "name": "Moscovium",
+            "symbol": "Mc",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 10,
+            "p": 3
+        },
+        {
+            "name": "Livermorium",
+            "symbol": "Lv",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 10,
+            "p": 4
+        },
+        {
+            "name": "Tennessine",
+            "symbol": "Ts",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 10,
+            "p": 5
+        },
+        {
+            "name": "Oganesson",
+            "symbol": "Og",
+            "noble-gas": "Rn",
+            "s": 2,
+            "d": 10,
+            "p": 6
         }
     ]
 }
