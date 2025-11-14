@@ -300,7 +300,7 @@ func HtmlInput(w http.ResponseWriter) {
         </div>
       </div>
       <button class="button" type="submit">
-        <span>Sumbit</span>
+        <span>Submit</span>
       </button>
     </form>
 	`,
