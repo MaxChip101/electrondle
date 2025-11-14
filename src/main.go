@@ -7,11 +7,13 @@ import (
 	"io"
 	"log"
 	"math/rand"
+	"net"
 	"net/http"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"runtime"
+	"slices"
 	"strconv"
 	"time"
 
@@ -41,10 +43,17 @@ type Element struct {
 	P_Suffix int    `json:"p-suffix"`
 }
 
+var (
+	GameStatePlaying = 0
+	GameStateWon     = 1
+	GameStateLost    = 2
+)
+
 var random *rand.Rand
 var periodic_table PeriodicTable
 var current_element Element
 var attempts []Attempt
+var maxAttempts int
 
 func HtmlStart(w http.ResponseWriter) {
 	io.WriteString(w, `
@@ -123,17 +132,83 @@ func Check_P(attempt Attempt) string {
 	return CheckDifference(current_element.P_Suffix - attempt.P)
 }
 
+func CheckWinState() int {
+	// win
+	if pos := len(attempts) - 1; pos >= 0 && current_element.NobleGas == attempts[pos].NobleGas && current_element.S_Suffix == attempts[pos].S && current_element.D_Suffix == attempts[pos].D && current_element.P_Suffix == attempts[pos].P {
+		return GameStateWon
+	} else if len(attempts) >= maxAttempts { // loss
+		return GameStateLost
+	} else { // continue
+		return GameStatePlaying
+	}
+}
+
 // ⏫🔼	✅	🔽⏬
 func AddAttempts(w http.ResponseWriter) {
+
+	state := CheckWinState()
+
+	switch state {
+	case GameStatePlaying:
+		fmt.Fprintf(w, `
+		<div class="attempt">
+			<span>%v attempts left</span>
+		</div>
+		`,
+			maxAttempts-len(attempts),
+		)
+	case GameStateWon:
+		fmt.Fprintf(w, `
+		<div class="attempt">
+			<div class="attempt-row">
+				<span>You Won, the element was: %v (%v)</span>
+			</div>
+			<div class="attempt-row">
+				<span>([%v] %vs<sup>%v</sup> %vd<sup>%v</sup> %vp<sup>%v</sup>)</span>
+			</div>
+		</div>
+		`,
+			current_element.Name,
+			current_element.Symbol,
+			current_element.NobleGas,
+			current_element.S_Prefix,
+			current_element.S_Suffix,
+			current_element.D_Prefix,
+			current_element.D_Suffix,
+			current_element.P_Prefix,
+			current_element.P_Suffix,
+		)
+	case GameStateLost:
+		fmt.Fprintf(w, `
+		<div class="attempt">
+			<div class="attempt-row">
+				<span>You Lost, the element was: %v (%v)</span>
+			</div>
+			<div class="attempt-row">
+				<span>([%v] %vs<sup>%v</sup> %vd<sup>%v</sup> %vp<sup>%v</sup>)</span>
+			</div>
+		</div>
+		`,
+			current_element.Name,
+			current_element.Symbol,
+			current_element.NobleGas,
+			current_element.S_Prefix,
+			current_element.S_Suffix,
+			current_element.D_Prefix,
+			current_element.D_Suffix,
+			current_element.P_Prefix,
+			current_element.P_Suffix,
+		)
+	}
 
 	for _, v := range attempts {
 		fmt.Fprintf(w, `
 	<div class="attempt">
         <div class="attempt-row">
-        <span>%v</span>
-        <span>%v</span>
-        <span>%v</span>
-        <span>%v</span>
+        <span>[%v]</span>
+        <span>s<sup>%v</sup></span>
+        <span>d<sup>%v</sup></span>
+        <span>p<sup>%v</sup></span>
         </div>
         <div class="attempt-row">
         <span>%v</span>
@@ -170,6 +245,17 @@ func HtmlInput(w http.ResponseWriter) {
 		s = attempts[pos].S
 		d = attempts[pos].D
 		p = attempts[pos].P
+	}
+
+	if CheckWinState() != 0 {
+		io.WriteString(w, `
+		<form action="/try-again">
+			<button class="button" type="submit">
+       			<span>Try Again</span>
+      		</button>
+		</form>
+		`)
+		return
 	}
 
 	fmt.Fprintf(w, `
@@ -222,8 +308,8 @@ func HtmlInput(w http.ResponseWriter) {
           </select>
         </div>
       </div>
-      <button class="submit-button" type="submit">
-        <span>Submit</span>
+      <button class="button" type="submit">
+        <span>Sumbit</span>
       </button>
     </form>
 	`,
@@ -266,7 +352,13 @@ func Selected(condition bool) string {
 	}
 }
 
-func HandleInput(w http.ResponseWriter, r *http.Request) {
+func HandleRestart(w http.ResponseWriter, r *http.Request) {
+	Start()
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
+
+func HandleSubmit(w http.ResponseWriter, r *http.Request) {
+
 	if r.Method != http.MethodPost {
 		http.Error(w, "POST Only", http.StatusMethodNotAllowed)
 		return
@@ -311,15 +403,15 @@ func Display(w http.ResponseWriter, r *http.Request) {
 	HtmlEnd(w)
 }
 
-func OpenApp() {
+func OpenApp(port int) {
 	var err error
 	switch runtime.GOOS {
 	case "linux":
-		err = exec.Command("xdg-open", "http://localhost:3000").Start()
+		err = exec.Command("xdg-open", fmt.Sprintf("http://localhost:%v", port)).Start()
 	case "windows":
-		err = exec.Command("rundll32", "url.dll,FileProtocolHandler", "http://localhost:3000").Start()
+		err = exec.Command("rundll32", "url.dll,FileProtocolHandler", fmt.Sprintf("http://localhost:%v", port)).Start()
 	case "darwin":
-		err = exec.Command("open", "http://localhost:3000").Start()
+		err = exec.Command("open", fmt.Sprintf("http://localhost:%v", port)).Start()
 	default:
 		err = fmt.Errorf("unsupported operating system, couldn't automatically open")
 	}
@@ -329,6 +421,28 @@ func OpenApp() {
 }
 
 func Start() {
+	num := random.Int() % len(periodic_table.Elements)
+	current_element = periodic_table.Elements[num]
+	if attempts != nil {
+		attempts = slices.Delete(attempts, 0, len(attempts))
+	}
+
+}
+
+func GetFreePort() (port int, err error) {
+	var a *net.TCPAddr
+	if a, err = net.ResolveTCPAddr("tcp", "localhost:0"); err == nil {
+		var l *net.TCPListener
+		if l, err = net.ListenTCP("tcp", a); err == nil {
+			defer l.Close()
+			return l.Addr().(*net.TCPAddr).Port, nil
+		}
+	}
+	return
+}
+
+func main() {
+	maxAttempts = 5
 	data, err := os.ReadFile(filepath.Join("res", "periodic_table.json"))
 	if err != nil {
 		log.Fatal(err)
@@ -339,27 +453,28 @@ func Start() {
 		log.Fatal(err)
 	}
 
-	num := random.Int() % len(periodic_table.Elements)
-	current_element = periodic_table.Elements[num]
-}
-
-func main() {
 	random = rand.New(rand.NewSource(time.Now().Unix()))
 	router := mux.NewRouter()
-	router.HandleFunc("/", Display).Methods("GET")
-	router.HandleFunc("/submit", HandleInput).Methods("POST")
+	router.HandleFunc("/", Display)
+	router.HandleFunc("/submit", HandleSubmit).Methods("POST")
+	router.HandleFunc("/try-again", HandleRestart)
 
 	router.PathPrefix("/res/").Handler(http.StripPrefix("/res/", http.FileServer(http.Dir("./res"))))
 
+	port, err := GetFreePort()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	go func() {
-		time.Sleep(time.Second)
-		OpenApp()
+		time.Sleep(500 * time.Millisecond)
+		OpenApp(port)
 		fmt.Println("opening app")
 	}()
 
 	Start()
-	fmt.Println("running server")
-	err := http.ListenAndServe(":3000", router)
+	fmt.Println("running server on port: ", port)
+	err = http.ListenAndServe(fmt.Sprintf(":%v", port), router)
 
 	if errors.Is(err, http.ErrServerClosed) {
 		log.Println("server closed")

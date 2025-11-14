@@ -1,9 +1,23 @@
 @font-face {
     font-family: "main-font";
     src: url("fonts/TitilliumWeb-Regular.ttf") format("truetype");
-    font-weight:normal;
-    font-style:normal;
-    font-display:swap;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --background-color: #121212;
+    --sub-box-background-color: #211d2b;
+    --box-background-color: #2f2b3b;
+    --input-border-color: #49435c;
+    --select-border-color: #3b334d;
+    --button-background-color: #4728a6;
+    --button-border-color: #542fc4;
+    --button-hover-background-color: #3b218a;
+    --attempts-border-color: #272332;
+    --text-color: #ffffff;
+
 }
 
 * {
@@ -12,7 +26,7 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: var(--background-color);
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 1fr 5fr 2fr;
@@ -22,12 +36,12 @@ body {
 }
 
 .inputs {
-    background-color: #2f2b3b;
-    border: 1px solid #49435c;
+    background-color: var(--box-background-color);
+    border: 1px solid var(--input-border-color);
     margin: 0 auto;
     padding: 2em;
     border-radius: 2em;
-    color: white;
+    color: var(--text-color);
     max-width: 30em;
     width: 100%;
     display: flex;
@@ -38,30 +52,31 @@ body {
 
 select {
     border: none;
-    background-color: #211d2b;
-    border: 1px solid #3b334d;
-    color: white;
+    background-color: var(--sub-box-background-color);
+    border: 1px solid var(--select-background-color);
+    color: var(--text-color);
     padding: 1em;
     border-radius: 1em;
 }
 
-.submit-button {
+.button {
     all: unset;
     display: block;
     margin: 0 auto;
-    background-color: #4728a6;
-    border: 1px solid #542fc4;
+    background-color: var(--button-background-color);
+    border: 1px solid var(--button-border-color);
     padding: 1em;
     padding-left: 2em;
     padding-right: 2em;
     border-radius: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
-    color: white;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
-.submit-button:hover {
-    background-color: #3b218a;
+.button:hover {
+    background-color: var(--button-hover-background-color);
     cursor: pointer;
 }
 
@@ -69,8 +84,8 @@ select {
     margin: 0 auto;
     max-width: 30em;
     width: 100%;
-    background-color: #211d2b;
-    border: 1px solid #272332;
+    background-color: var(--sub-box-background-color);
+    border: 1px solid var(--attempts-border-color);
     border-radius: 2em;
     overflow-y: scroll;
     margin-top: 0.5em;
@@ -78,20 +93,22 @@ select {
 }
 
 .attempt {
-    background-color: #2f2b3b;
-    border: 1px solid #49435c;
+    background-color: var(--box-background-color);
+    border: 1px solid var(--input-border-color);
     margin: 1em;
     text-align: center;
-    color: white;
+    color: var(--text-color);
     border-radius: 1em;
     padding: 0.5em;
 }
 
 .attempt-row {
-    display:flex;
+    display: flex;
     justify-content: space-between;
+    text-align: center;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+
 }
 
 .attempt-row span {
@@ -101,5 +118,5 @@ select {
 h1 {
     margin: 0.5em;
     text-align: center;
-    color: white;
+    color: var(--text-color);
 }
