@@ -52,21 +52,22 @@ func HtmlStart(w http.ResponseWriter) {
 	<html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta
+      		name="viewport"
+      		content="width=device-width,minimum-scale=1,initial-scale=1"
+    	/>
 		<title>Electrondle</title>
 		<link rel="stylesheet" href="/res/style.css">
 		<link rel="icon" type="image/x-icon" href="/res/favicon.ico">
 	</head>
 	<body class="body">
-		<div class="title">
-			<label class="text" style="font-size: x-large;">Electrondle</label>
-		</div>
+		<h1 class="title">Electrondle</h1>
 	`)
 }
 
 func StartAttempts(w http.ResponseWriter) {
 	io.WriteString(w, `
-	<div class="check-section">
+	<div class="attempts">
 	`)
 }
 
@@ -127,12 +128,10 @@ func AddAttempts(w http.ResponseWriter) {
 
 	for _, v := range attempts {
 		fmt.Fprintf(w, `
-	<div class="attempt-box">
-		<code>
-			<pre class="centered">[%v]	s^%v	d^%v	p^%v</pre>
-			<pre class="centered">%v	%v	%v	%v</pre>
-		</code>
-	</div>
+	<div class="attempt">
+        <pre>[%v]	s^%v	d^%v	p^%v</pre>
+        <pre>%v	%v	%v	%v</pre>
+    </div>
 	`, v.NobleGas, v.S, v.D, v.P, CheckNobleGas(v), Check_S(v), Check_D(v), Check_P(v))
 	}
 }
@@ -140,13 +139,6 @@ func AddAttempts(w http.ResponseWriter) {
 func EndAttempts(w http.ResponseWriter) {
 	io.WriteString(w, `
 		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 	`)
 }
 
@@ -171,62 +163,59 @@ func HtmlInput(w http.ResponseWriter) {
 	}
 
 	fmt.Fprintf(w, `
-		<div class="input-section">
-		 	<form method="POST" action="/submit">
-			<div class="input-box">
-				<div class="centered">
-					<select id="noble-gas" class="dropdown" name="noble-gas">
-						<option value="~" %v>None</option>
-						<option value="He" %v>[He]</option>
-						<option value="Ne" %v>[Ne]</option>
-						<option value="Ar" %v>[Ar]</option>
-						<option value="Kr" %v>[Kr]</option>
-						<option value="Xe" %v>[Xe]</option>
-						<option value="Rn" %v>[Rn]</option>
-					</select>
-				</div>
-				<div class="centered"> 
-					<label class="text">s^</label>
-					<select id="s-orbital" class="dropdown" name="s-orbital">
-						<option value="1" %v>1</option>
-						<option value="2" %v>2</option>
-					</select>
-				</div>
-				<div class="centered"> 
-					<label class="text">d^</label>
-					<select id="d-orbital" class="dropdown" name="d-orbital">
-						<option value="0" %v>0</option>
-						<option value="1" %v>1</option>
-						<option value="2" %v>2</option>
-						<option value="3" %v>3</option>
-						<option value="4" %v>4</option>
-						<option value="5" %v>5</option>
-						<option value="6" %v>6</option>
-						<option value="7" %v>7</option>
-						<option value="8" %v>8</option>
-						<option value="9" %v>9</option>
-						<option value="10" %v>10</option>
-					</select>
-				</div>
-				<div class="centered"> 
-					<label class="text">p^</label>
-					<select id="p-orbital" class="dropdown" name="p-orbital">
-						<option value="0" %v>0</option>
-						<option value="1" %v>1</option>
-						<option value="2" %v>2</option>
-						<option value="3" %v>3</option>
-						<option value="4" %v>4</option>
-						<option value="5" %v>5</option>
-						<option value="6" %v>6</option>
-					</select>
-				</div>
-				
-			</div>
-			<div class="centered">
-				<button type="submit" class="button">Submit</button>
-			</div>
-			</form>
-		</div>
+	<form method="POST" action="/submit">
+      <div class="inputs">
+    	<div>
+          <select id="noble-gas" class="dropdown" name="noble-gas">
+            <option value="~" %v>None</option>
+            <option value="He" %v>[He]</option>
+            <option value="Ne" %v>[Ne]</option>
+            <option value="Ar" %v>[Ar]</option>
+            <option value="Kr" %v>[Kr]</option>
+            <option value="Xe" %v>[Xe]</option>
+            <option value="Rn" %v>[Rn]</option>
+          </select>
+        </div>
+        <div>
+          <label class="text">s^</label>
+          <select id="s-orbital" class="dropdown" name="s-orbital">
+            <option value="1" %v>1</option>
+            <option value="2" %v>2</option>
+          </select>
+        </div>
+        <div>
+          <label class="text">d^</label>
+          <select id="d-orbital" class="dropdown" name="d-orbital">
+            <option value="0" %v>0</option>
+            <option value="1" %v>1</option>
+            <option value="2" %v>2</option>
+            <option value="3" %v>3</option>
+            <option value="4" %v>4</option>
+            <option value="5" %v>5</option>
+            <option value="6" %v>6</option>
+            <option value="7" %v>7</option>
+            <option value="8" %v>8</option>
+            <option value="9" %v>9</option>
+            <option value="10" %v>10</option>
+          </select>
+        </div>
+        <div>
+          <label class="text">p^</label>
+          <select id="p-orbital" class="dropdown" name="p-orbital">
+            <option value="0" %v>0</option>
+            <option value="1" %v>1</option>
+            <option value="2" %v>2</option>
+            <option value="3" %v>3</option>
+            <option value="4" %v>4</option>
+            <option value="5" %v>5</option>
+            <option value="6" %v>6</option>
+          </select>
+        </div>
+      </div>
+      <button class="submit-button" type="submit">
+        <span>Submit</span>
+      </button>
+    </form>
 	`,
 		// remember last played values
 		Selected(noble_gas == "~"),

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <title>Electrondle</title>
+    <link rel="stylesheet" href="res/style.css">
+  </head>
+  <body>
+    <h1 class="title">Electrondle</h1>
+    <div class="attempts">
+      <div class="attempt">
+        <div class="attempt-row">
+        <span>[~]</span>
+        <span>s^0</span>
+        <span>d^0</span>
+        <span>^0</span>
+        </div>
+        <div class="attempt-row">
+        <span>🔼</span>
+        <span>🔼</span>
+        <span>⏫</span>
+        <span>⏫</span>
+        </div>
+      </div>
+    </div>
+    <form method="POST" action="/submit">
+      <div class="inputs">
+        <div>
+          <select id="noble-gas" class="dropdown" name="noble-gas">
+            <option value="~" selected="selected">None</option>
+            <option value="He">[He]</option>
+            <option value="Ne">[Ne]</option>
+            <option value="Ar">[Ar]</option>
+            <option value="Kr">[Kr]</option>
+            <option value="Xe">[Xe]</option>
+            <option value="Rn">[Rn]</option>
+          </select>
+        </div>
+        <div>
+          <label class="text">s^</label>
+          <select id="s-orbital" class="dropdown" name="s-orbital">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div>
+          <label class="text">d^</label>
+          <select id="d-orbital" class="dropdown" name="d-orbital">
+            <option value="0" selected="selected">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div>
+          <label class="text">p^</label>
+          <select id="p-orbital" class="dropdown" name="p-orbital">
+            <option value="0" selected="selected">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+      </div>
+      <button class="submit-button" type="submit">
+        <span>Submit</span>
+      </button>
+    </form>
+  </body>
+</html>
