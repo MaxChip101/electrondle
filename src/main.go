@@ -129,8 +129,18 @@ func AddAttempts(w http.ResponseWriter) {
 	for _, v := range attempts {
 		fmt.Fprintf(w, `
 	<div class="attempt">
-        <pre>[%v]	s^%v	d^%v	p^%v</pre>
-        <pre>%v	%v	%v	%v</pre>
+        <div class="attempt-row">
+        <span>%v</span>
+        <span>%v</span>
+        <span>%v</span>
+        <span>%v</span>
+        </div>
+        <div class="attempt-row">
+        <span>%v</span>
+        <span>%v</span>
+        <span>%v</span>
+        <span>%v</span>
+        </div>
     </div>
 	`, v.NobleGas, v.S, v.D, v.P, CheckNobleGas(v), Check_S(v), Check_D(v), Check_P(v))
 	}
