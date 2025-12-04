@@ -77,6 +77,7 @@ func StartAttempts(w http.ResponseWriter) {
 	`)
 }
 
+// Converts the noble gas into a number able to tell the direction of how correct the response was
 func GetNobleGasNumber(noble_gas string) int {
 	switch noble_gas {
 	case "~":
@@ -113,6 +114,7 @@ func CheckDifference(difference int) string {
 	return "~"
 }
 
+// returns the character to indicate the direction
 func CheckNobleGas(attempt Attempt) string {
 	return CheckDifference(GetNobleGasNumber(current_element.NobleGas) - GetNobleGasNumber(attempt.NobleGas))
 }
@@ -130,17 +132,16 @@ func Check_P(attempt Attempt) string {
 }
 
 func CheckWinState() int {
-	// win
+	// win (all orbitals equal)
 	if pos := len(attempts) - 1; pos >= 0 && current_element.NobleGas == attempts[pos].NobleGas && current_element.S == attempts[pos].S && current_element.D == attempts[pos].D && current_element.P == attempts[pos].P {
 		return GameStateWon
-	} else if len(attempts) >= maxAttempts { // loss
+	} else if len(attempts) >= maxAttempts { // loss (out of attempts)
 		return GameStateLost
 	} else { // continue
 		return GameStatePlaying
 	}
 }
 
-// ⏫🔼	✅	🔽⏬
 func AddAttempts(w http.ResponseWriter) {
 
 	state := CheckWinState()
@@ -343,6 +344,7 @@ func Selected(condition bool) string {
 	}
 }
 
+// resets the game
 func HandleRestart(w http.ResponseWriter, r *http.Request) {
 	Start()
 	http.Redirect(w, r, "/", http.StatusSeeOther)
