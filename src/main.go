@@ -366,15 +366,18 @@ func HandleSubmit(w http.ResponseWriter, r *http.Request) {
 
 	s_value, err := strconv.ParseInt(r.FormValue("s-orbital"), 10, strconv.IntSize)
 	if err != nil {
-		log.Fatal(err)
+		http.Error(w, "Couldn't Parse Form: "+err.Error(), http.StatusInternalServerError)
+		log.Println(err)
 	}
 	d_value, err := strconv.ParseInt(r.FormValue("d-orbital"), 10, strconv.IntSize)
 	if err != nil {
-		log.Fatal(err)
+		http.Error(w, "Couldn't Parse Form: "+err.Error(), http.StatusInternalServerError)
+		log.Println(err)
 	}
 	p_value, err := strconv.ParseInt(r.FormValue("p-orbital"), 10, strconv.IntSize)
 	if err != nil {
-		log.Fatal(err)
+		http.Error(w, "Couldn't Parse Form: "+err.Error(), http.StatusInternalServerError)
+		log.Println(err)
 	}
 
 	attempts = append(attempts, Attempt{
