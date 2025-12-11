@@ -213,7 +213,7 @@ func AddAttempts(w http.ResponseWriter) {
 	}
 }
 
-func EndAttempts(w http.ResponseWriter) {
+func EndDiv(w http.ResponseWriter) {
 	io.WriteString(w, `
 		</div>
 	`)
@@ -224,6 +224,31 @@ func HtmlEnd(w http.ResponseWriter) {
 	</body>
 	</html>
 	`)
+}
+
+func ShowPeriodicTable(w http.ResponseWriter, r *http.Request) {
+	HtmlStart(w)
+	io.WriteString(w, `
+		<div class="image-div">
+			<img class="image" src="/res/periodic_table.png">
+		</div>
+		<form action="/">
+			<button class="button" type="submit">
+    			<span>Go Back</span>
+      		</button>
+		</form>
+    `)
+	HtmlEnd(w)
+}
+
+func HtmlPeriodicTableButton(w http.ResponseWriter) {
+	io.WriteString(w, `
+    <form action="/periodic-table">
+		<button class="button" type="submit">
+    		<span>Show Periodic Table</span>
+      	</button>
+	</form>
+    `)
 }
 
 func HtmlInput(w http.ResponseWriter) {
@@ -394,8 +419,9 @@ func Display(w http.ResponseWriter, r *http.Request) {
 	HtmlStart(w)
 	StartAttempts(w)
 	AddAttempts(w)
-	EndAttempts(w)
+	EndDiv(w)
 	HtmlInput(w)
+	HtmlPeriodicTableButton(w)
 	HtmlEnd(w)
 }
 
@@ -454,6 +480,7 @@ func main() {
 	router.HandleFunc("/", Display)
 	router.HandleFunc("/submit", HandleSubmit).Methods("POST")
 	router.HandleFunc("/try-again", HandleRestart)
+	router.HandleFunc("/periodic-table", ShowPeriodicTable)
 
 	router.PathPrefix("/res/").Handler(http.StripPrefix("/res/", http.FileServer(http.Dir("./res"))))
 
